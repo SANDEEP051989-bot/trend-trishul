@@ -1,5 +1,7 @@
 {
- "sent": {},
+ "sent": {
+  "btc_short": "2026-11-07 18"
+ },
  "alarm_on": {
   "gold": false,
   "btc": false
