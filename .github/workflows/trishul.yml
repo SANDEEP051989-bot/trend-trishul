@@ -1,0 +1,67 @@
+name: Trend Trishul
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "test = send everything now | short | full | auto"
+        default: "test"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trend-trishul
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Restore saved data
+        uses: actions/cache/restore@v4
+        with:
+          path: state/cache
+          key: trishul-cache-${{ github.run_id }}
+          restore-keys: trishul-cache-
+
+      - name: Run Trend Trishul
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          TRISHUL_MODE: ${{ github.event.inputs.mode || 'auto' }}
+        run: python -m trishul.main
+
+      - name: Keep saved data
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: state/cache
+          key: trishul-cache-${{ github.run_id }}
+
+      - name: Save track record
+        if: always()
+        run: |
+          git config user.name "trend-trishul-bot"
+          git config user.email "trend-trishul-bot@users.noreply.github.com"
+          git add state/state.json state/track_pending.json state/track_summary.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Trend Trishul: update track record"
+            git pull --rebase --autostash || true
+            git push || true
+          fi
