@@ -142,6 +142,14 @@ def run(mode="auto"):
         if want_full:
             pages = cards.full_report(asset, name, mk, pts, fam, ver, note, now, foot, lambda pid: tracker.label(summ, pid))
             ok = telegram.send_album(pages, "FULL REPORT - " + cap)
+            try:
+                os.makedirs(config.CACHE_DIR, exist_ok=True)
+                pdf = os.path.join(config.CACHE_DIR, f"Trend_Trishul_{name}_{ist.strftime('%d%b_%I%p')}.pdf")
+                cards.to_pdf(pages, pdf)
+                telegram.send_document(pdf, f"{name} full report - all pages in one PDF")
+                os.remove(pdf)
+            except Exception as e:  # noqa
+                log.warning("pdf failed: %s", e)
             if ok and not test:
                 sent[f"{asset}_full"] = slot
         if not test:

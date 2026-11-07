@@ -754,9 +754,11 @@ def p_big_trades(c):
     return pt
 
 
-def p_open_gaps(c):
+def gap_list(c):
+    """All unfilled price gaps: (price, name). Cached per run."""
+    if getattr(c, "_gaps", None) is not None:
+        return c._gaps
     m = c.mk
-    pt = Point("open_gaps", "41", "Open Gaps", "Levels", False)
     gaps = []
     # weekend gap: this week's first price vs last Friday close
     if c.g:
@@ -779,7 +781,7 @@ def p_open_gaps(c):
                 fri = float(cme.close.iloc[i - 1])
                 after = m.m15[m.m15.index >= cme.index[i]]
                 if len(after) and not (after.low.min() <= fri <= after.high.max()):
-                    gaps.append((fri, "CME futures weekend gap"))
+                    gaps.append((fri, "CME weekend gap"))
     # 1-hour imbalance gaps not yet filled
     h = m.h1.tail(120)
     thr = 0.25 * m.atr_h
@@ -790,12 +792,110 @@ def p_open_gaps(c):
             gaps.append(((a.high + cc.low) / 2, "1-hour price gap"))
         if a.low - cc.high > thr and not (later.high.max() >= a.low):
             gaps.append(((a.low + cc.high) / 2, "1-hour price gap"))
+    c._gaps = gaps
+    return gaps
+
+
+def p_open_gaps(c):
+    pt = Point("open_gaps", "16", "Open Gaps (Gap Fill)", "Levels", True)
+    gaps = gap_list(c)
     if not gaps:
-        pt.vote, pt.text = 0.0, "No open price gaps nearby."
+        pt.vote, pt.text = 0.0, "No open price gaps nearby - nothing to fill."
         return pt
-    g = min(gaps, key=lambda x: abs(x[0] - c.p))
+    up = [g for g in gaps if g[0] > c.p]
+    dn = [g for g in gaps if g[0] <= c.p]
+    a = min(up, key=lambda x: x[0]) if up else None
+    b = max(dn, key=lambda x: x[0]) if dn else None
+    g = min([x for x in (a, b) if x], key=lambda x: abs(x[0] - c.p))
     pt.vote = 0.5 if g[0] > c.p else -0.5
-    pt.text = f"Unfilled {g[1]} at {c.M(g[0])} ({'above' if g[0] > c.p else 'below'}, {c.M(abs(g[0] - c.p))} away) - price often comes back to fill it."
+    parts = []
+    if a:
+        parts.append(f"above at {c.M(a[0])} ({a[1]}, {c.M(a[0] - c.p)} away)")
+    if b:
+        parts.append(f"below at {c.M(b[0])} ({b[1]}, {c.M(c.p - b[0])} away)")
+    pt.text = "Unfilled gap " + " and ".join(parts) + f". Nearest one ({c.M(g[0])}) is the likely fill target."
+    pt.extra = {"above": a, "below": b}
+    return pt
+
+
+def pool_list(c):
+    m = c.mk
+    out = []
+    asia = m.session_box(0, 7)
+    if asia and asia["done"]:
+        out += [(asia["high"], "Asia high"), (asia["low"], "Asia low")]
+    hs, ls = swings(m.h1.tail(120))
+    tol = c.p * 0.0006
+    for arr, nm in ((hs, "Equal highs"), (ls, "Equal lows")):
+        for i in range(1, len(arr)):
+            if abs(arr[i][1] - arr[i - 1][1]) <= tol:
+                out.append(((arr[i][1] + arr[i - 1][1]) / 2, nm))
+    return out
+
+
+def p_key_levels(c):
+    """The 2 strongest supports and 2 strongest resistances, from ALL level points together."""
+    m = c.mk
+    pt = Point("key_levels", "2", "Key Support & Resistance", "Levels", True, vote=0.0, directional=False)
+    W = {"yday": 1.5, "week": 2.0, "pivot": 1.0, "profile": 1.5, "round": 1.0, "vwap": 1.0, "option": 2.0,
+         "maxpain": 1.0, "pool": 1.5, "gap": 1.5, "proj": 1.0, "firsthour": 1.0, "biground": 1.5}
+    L = []
+    for price, name, fam in m.levels():
+        if fam == "round":
+            big = c.mk.cfg["round_big"]
+            fam = "biground" if abs(price / big - round(price / big)) < 1e-9 else "round"
+            name = "Big round number" if fam == "biground" else "Round number"
+        L.append((price, name, fam))
+    o = c.opt or {}
+    if o.get("call_wall"):
+        L.append((o["call_wall"], "Option ceiling (biggest rise bets)", "option"))
+    if o.get("put_wall"):
+        L.append((o["put_wall"], "Option floor (biggest fall bets)", "option"))
+    if o.get("max_pain"):
+        L.append((o["max_pain"], "Max pain", "maxpain"))
+    L += [(p, n, "pool") for p, n in pool_list(c)]
+    L += [(p, "Open gap", "gap") for p, n in gap_list(c)]
+    L += [(m.upper, "Top projection line", "proj"), (m.lower, "Bottom projection line", "proj")]
+    reach = 1.6 * m.atr_d
+    L = sorted([x for x in L if abs(x[0] - c.p) <= reach and abs(x[0] - c.p) > 0.02 * m.atr_d])
+    tol = c.p * c.mk.cfg["tol_pct"] / 100 * 1.5
+    clusters, cur = [], []
+    for lv in L:
+        if cur and lv[0] - cur[0][0] > tol * 2:
+            clusters.append(cur)
+            cur = []
+        cur.append(lv)
+    if cur:
+        clusters.append(cur)
+    zs = []
+    for cl in clusters:
+        fams = {}
+        for p_, n_, f_ in cl:
+            fams.setdefault(f_, n_)
+        score = sum(W.get(f, 1.0) for f in fams)
+        names = []
+        for n_ in fams.values():
+            if n_ not in names:
+                names.append(n_)
+        zs.append({"price": float(np.mean([x[0] for x in cl])), "score": score, "n": len(fams), "names": names})
+    zs = [z for z in zs if z["score"] >= 2.0]          # at least two methods (or one big one) must agree
+    res = sorted([z for z in zs if z["price"] > c.p], key=lambda z: (-z["score"], z["price"] - c.p))[:2]
+    sup = sorted([z for z in zs if z["price"] < c.p], key=lambda z: (-z["score"], c.p - z["price"]))[:2]
+    res.sort(key=lambda z: z["price"])
+    sup.sort(key=lambda z: -z["price"])
+    def grade(z):
+        return "Very strong" if z["score"] >= 5 else "Strong" if z["score"] >= 3.5 else "Medium"
+    for z in res + sup:
+        z["grade"] = grade(z)
+    def fmt(z):
+        return f"{c.M(z['price'])} ({z['grade']}: {', '.join(z['names'][:2])})"
+    parts = []
+    if res:
+        parts.append("Resistance " + " and ".join(fmt(z) for z in res))
+    if sup:
+        parts.append("Support " + " and ".join(fmt(z) for z in sup))
+    pt.text = (". ".join(parts) + ".") if parts else "No strong level within reach today."
+    pt.extra = {"res": res, "sup": sup}
     return pt
 
 
@@ -941,8 +1041,15 @@ def e_gs_ratio(c):
     s = data.yf_close("SI=F")
     if s is None:
         return pt
-    gld = c.mk.days.close
-    r = (gld / s.reindex(gld.index, method="nearest")).dropna()
+    def by_day(x):
+        x = x.copy()
+        idx = pd.to_datetime(x.index)
+        if idx.tz is not None:
+            idx = idx.tz_convert(None)
+        x.index = idx.normalize()
+        return x[~x.index.duplicated(keep="last")]
+    gld, sil = by_day(c.mk.days.close), by_day(s)
+    r = (gld / sil.reindex(gld.index).ffill()).dropna()
     if len(r) < 60:
         return pt
     m50 = r.tail(50).mean()
@@ -1128,12 +1235,12 @@ def e_hash(c):
     return pt
 
 
-FINAL_50 = [p_big_move_alarm, p_range_used, p_projection, p_market_mood, p_move_speed, p_strong_levels,
+FINAL_50 = [p_big_move_alarm, p_key_levels, p_range_used, p_projection, p_market_mood, p_move_speed, p_strong_levels,
             p_option_walls, p_calm_fast, p_money_in_out, p_big_players, p_dollar, p_rates, p_news, p_crowd,
-            p_stop_pools, p_day_pace, p_busy_hours, p_weekday, p_stop_size, p_dont_chase, p_asia_box,
+            p_stop_pools, p_open_gaps, p_day_pace, p_busy_hours, p_weekday, p_stop_size, p_dont_chase, p_asia_box,
             p_first_hour, p_yesterday, p_last_week, p_round, p_vwap, p_busy_zones, p_trend_ladder, p_tf_agree,
             p_clean, p_stretch, p_push_weaker, p_tight_day, p_open_lines, p_buyers_sellers, p_pcr_vol,
-            p_max_pain, p_expected_move, p_near_fear, p_big_trades, p_open_gaps, p_silver, p_gold_fear,
+            p_max_pain, p_expected_move, p_near_fear, p_big_trades, p_silver, p_gold_fear,
             p_central_banks, p_china, p_us_buyers, p_forced, p_whales, p_stocks, p_liquidity]
 GOLD_ONLY = {"silver_check", "gold_fear", "central_banks", "china_demand", "gs_ratio", "miners", "inflation_exp"}
 BTC_ONLY = {"crowd", "us_buyers", "forced_closings", "whales", "tech_link", "btc_dominance", "stablecoins",

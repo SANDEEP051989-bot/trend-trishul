@@ -55,3 +55,17 @@ def send_text(text):
     r = data.S.post(f"https://api.telegram.org/bot{config.TELEGRAM_BOT_TOKEN}/sendMessage",
                     data={"chat_id": config.TELEGRAM_CHAT_ID, "text": text[:4000]}, timeout=30)
     return r.ok
+
+
+def send_document(path, caption=""):
+    if not config.TELEGRAM_BOT_TOKEN:
+        log.warning("no TELEGRAM_BOT_TOKEN - not sending")
+        return False
+    import os
+    with open(path, "rb") as f:
+        r = data.S.post(f"https://api.telegram.org/bot{config.TELEGRAM_BOT_TOKEN}/sendDocument",
+                        data={"chat_id": config.TELEGRAM_CHAT_ID, "caption": caption[:1000]},
+                        files={"document": (os.path.basename(path), f, "application/pdf")}, timeout=120)
+    if not r.ok:
+        log.warning("telegram sendDocument failed %s %s", r.status_code, r.text[:300])
+    return r.ok

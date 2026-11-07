@@ -195,6 +195,45 @@ def today_map(c, asset, mk, used_pt):
     c.y = y0 + h
 
 
+def key_levels_panel(c, asset, kp, gp):
+    """2 strongest resistances above, price, 2 strongest supports below, plus the nearest gap to fill."""
+    if not kp or not kp.extra:
+        return
+    res, sup = kp.extra.get("res", []), kp.extra.get("sup", [])
+    if not res and not sup:
+        return
+    y0 = c.y + 22
+    inner = W - 2 * PAD - 64
+    rows = [("RESISTANCE", z, RED) for z in sorted(res, key=lambda z: -z["price"])] + [None] + \
+           [("SUPPORT", z, GREEN) for z in sup]
+    gap_txt = ""
+    if gp and gp.extra:
+        g = [x for x in (gp.extra.get("above"), gp.extra.get("below")) if x]
+        if g:
+            gap_txt = "Gap to fill: " + ",  ".join(f"{_money(x[0], asset)} ({'above' if x is gp.extra.get('above') else 'below'})" for x in g)
+    h = 70 + sum(96 if r else 46 for r in rows) + (50 if gap_txt else 0) + 10
+    c.panel(y0, h)
+    c.text(PAD + 32, y0 + 24, "KEY SUPPORT & RESISTANCE", F(26, True), GOLD)
+    y = y0 + 70
+    for r in rows:
+        if r is None:
+            c.d.line((PAD + 32, y + 22, W - PAD - 32, y + 22), fill=LINE, width=2)
+            tw = c.tw("  PRICE NOW  ", F(22, True))
+            c.d.rectangle((W / 2 - tw / 2, y + 8, W / 2 + tw / 2, y + 36), fill=PANEL)
+            c.text(W / 2, y + 22, "PRICE NOW", F(22, True), SOFT, anchor="mm")
+            y += 46
+            continue
+        kind, z, col = r
+        c.d.rounded_rectangle((PAD + 32, y + 4, PAD + 40, y + 80), radius=4, fill=col)
+        c.text(PAD + 60, y + 2, f"{kind}  {_money(z['price'], asset)}", F(30, True), col)
+        c.text(W - PAD - 32, y + 6, z["grade"], F(24, True), WHITE if z["grade"] != "Medium" else SOFT, anchor="ra")
+        c.para(PAD + 60, y + 44, ", ".join(z["names"][:4]), F(23), inner - 40, SOFT, gap=4, max_lines=1)
+        y += 96
+    if gap_txt:
+        c.text(PAD + 32, y + 8, gap_txt, F(26, True), BLUE)
+    c.y = y0 + h
+
+
 def chips(c, items):
     y0 = c.y + 22
     n = len(items)
@@ -288,6 +327,7 @@ def short_card(asset, name, mk, points, fam, ver, note, now, footer_text, label=
     verdict_box(c, ver)
     alarm_strip(c, P.get("big_move_alarm"))
     today_map(c, asset, mk, P.get("range_used"))
+    key_levels_panel(c, asset, P.get("key_levels"), P.get("open_gaps"))
     mood = P.get("market_mood")
     spd = P.get("move_speed")
     busy = P.get("busy_hours")
@@ -300,7 +340,7 @@ def short_card(asset, name, mk, points, fam, ver, note, now, footer_text, label=
     money = [P[k] for k in ("money_in_out", "big_players", "option_walls", "crowd") if k in P]
     rows_panel(c, "BIG MONEY", money[:4], font=F(26), name_font=F(27, True), max_lines=2)
     family_grid(c, fam)
-    shown = {"big_move_alarm", "range_used", "projection_lines", "market_mood", "move_speed", "busy_hours",
+    shown = {"big_move_alarm", "key_levels", "open_gaps", "range_used", "projection_lines", "market_mood", "move_speed", "busy_hours",
              "money_in_out", "big_players", "option_walls", "crowd"}
     key = [p for p in points if p.top and p.id not in shown and p.tone in ("warn", "alarm", "up", "down")]
     key += [p for p in points if not p.top and p.tone in ("warn", "alarm")]
@@ -358,3 +398,10 @@ def alert_card(title, lines, col=RED, now=None):
     if now:
         footer(c, now.astimezone(IST).strftime("%d %b %I:%M %p IST").replace(" 0", " ") + "  -  Not financial advice")
     return c.crop(c.y)
+
+
+def to_pdf(pages, path):
+    """All report pages in ONE PDF file (easy to download and share)."""
+    pages = [p.convert("RGB") for p in pages]
+    pages[0].save(path, "PDF", save_all=True, append_images=pages[1:], resolution=130)
+    return path
