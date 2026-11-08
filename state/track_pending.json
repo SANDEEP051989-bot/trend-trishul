@@ -1,29 +1,5 @@
 [
 {
-"t": 1794056207.133151,
-"a": "btc",
-"p": 75786.29,
-"v": {
-"big_players": -1.0,
-"dollar": -1.0,
-"rates": 0.5,
-"open_gaps": 0.5,
-"first_hour": -1.0,
-"yesterday": 0.3,
-"last_week": -1.0,
-"vwap": -1.0,
-"trend_ladder": 1.0,
-"tf_agree": -1.0,
-"open_lines": -0.3333333333333333,
-"pcr_today": 1.0,
-"big_option_trades": -0.5,
-"us_buyers": -1.0,
-"whales": 1.0,
-"stock_mood": -1.0,
-"world_money": 1.0
-}
-},
-{
 "t": 1794063960.884449,
 "a": "btc",
 "p": 75814.23,
@@ -295,6 +271,32 @@
 "whales": 1.0,
 "stock_mood": -1.0,
 "world_money": 1.0
+}
+},
+{
+"t": 1794150242.933285,
+"a": "btc",
+"p": 75923.53,
+"v": {
+"big_players": -1.0,
+"dollar": -1.0,
+"rates": 0.5,
+"open_gaps": 0.5,
+"asia_box": 1.0,
+"yesterday": 0.3,
+"last_week": -1.0,
+"vwap": 1.0,
+"busy_zones": 1.0,
+"trend_ladder": 1.0,
+"open_lines": -0.3333333333333333,
+"buyers_sellers": 1.0,
+"big_option_trades": 0.5,
+"us_buyers": -1.0,
+"whales": 1.0,
+"stock_mood": -1.0,
+"world_money": 1.0,
+"stablecoins": -0.5,
+"weekly_trend": 1.0
 }
 }
 ]
