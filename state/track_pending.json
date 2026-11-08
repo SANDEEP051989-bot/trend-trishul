@@ -1,29 +1,5 @@
 [
 {
-"t": 1794078872.368034,
-"a": "btc",
-"p": 75680.01,
-"v": {
-"strong_levels": -0.5,
-"big_players": -1.0,
-"dollar": -1.0,
-"rates": 0.5,
-"open_gaps": 0.5,
-"first_hour": -1.0,
-"yesterday": -0.3,
-"last_week": -1.0,
-"vwap": -1.0,
-"tf_agree": -1.0,
-"open_lines": -1.0,
-"big_option_trades": -0.5,
-"us_buyers": -1.0,
-"whales": 1.0,
-"stock_mood": -1.0,
-"world_money": 1.0,
-"verdict": -1
-}
-},
-{
 "t": 1794085454.20261,
 "a": "btc",
 "p": 75586.15,
@@ -291,6 +267,30 @@
 "whales": 1.0,
 "stock_mood": -1.0,
 "world_money": 1.0
+}
+},
+{
+"t": 1794171854.61248,
+"a": "btc",
+"p": 75606.8,
+"v": {
+"big_players": -1.0,
+"dollar": -1.0,
+"rates": 0.5,
+"open_gaps": 0.5,
+"first_hour": -1.0,
+"yesterday": -0.3,
+"last_week": -1.0,
+"vwap": -1.0,
+"busy_zones": -1.0,
+"tf_agree": -1.0,
+"open_lines": -1.0,
+"big_option_trades": 0.5,
+"us_buyers": -1.0,
+"whales": 1.0,
+"stock_mood": -1.0,
+"world_money": 1.0,
+"verdict": -1
 }
 }
 ]
