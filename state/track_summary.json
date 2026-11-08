@@ -1,72 +1,80 @@
 {
 "btc": {
 "big_players": [
-1,
-0
+2,
+1
 ],
 "dollar": [
-1,
-0
+2,
+1
 ],
 "rates": [
-1,
+2,
 1
 ],
 "open_gaps": [
-1,
+2,
 1
 ],
 "first_hour": [
-1,
-0
+2,
+1
 ],
 "yesterday": [
-1,
+2,
 1
 ],
 "last_week": [
-1,
-0
+2,
+1
 ],
 "vwap": [
-1,
-0
+2,
+1
 ],
 "trend_ladder": [
-1,
+2,
 1
 ],
 "tf_agree": [
-1,
-0
+2,
+1
 ],
 "open_lines": [
-1,
-0
+2,
+1
 ],
 "pcr_today": [
-1,
+2,
 1
 ],
 "big_option_trades": [
-1,
-0
+2,
+1
 ],
 "us_buyers": [
-1,
-0
+2,
+1
 ],
 "whales": [
-1,
+2,
 1
 ],
 "stock_mood": [
-1,
-0
+2,
+1
 ],
 "world_money": [
+2,
+1
+],
+"stablecoins": [
 1,
 1
+],
+"weekly_trend": [
+1,
+0
 ]
 }
 }
