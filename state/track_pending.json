@@ -234,5 +234,24 @@
 "stock_mood": -1.0,
 "world_money": 1.0
 }
+},
+{
+"t": 1794129340.899276,
+"a": "btc",
+"p": 75765.22,
+"v": {
+"big_players": -1.0,
+"dollar": -1.0,
+"rates": 0.5,
+"open_gaps": 0.5,
+"yesterday": 0.3,
+"last_week": -1.0,
+"open_lines": -0.3333333333333333,
+"big_option_trades": -0.5,
+"us_buyers": -1.0,
+"whales": 1.0,
+"stock_mood": -1.0,
+"world_money": 1.0
+}
 }
 ]
