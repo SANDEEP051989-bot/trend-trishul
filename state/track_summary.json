@@ -1,19 +1,19 @@
 {
 "btc": {
 "big_players": [
-22,
-18
+24,
+20
 ],
 "dollar": [
 21,
 17
 ],
 "rates": [
-22,
+24,
 4
 ],
 "open_gaps": [
-22,
+24,
 4
 ],
 "first_hour": [
@@ -21,64 +21,64 @@
 7
 ],
 "yesterday": [
-22,
-9
+24,
+10
 ],
 "last_week": [
-22,
-16
+24,
+17
 ],
 "vwap": [
-18,
-8
+20,
+9
 ],
 "trend_ladder": [
-11,
+13,
 3
 ],
 "tf_agree": [
-14,
-10
+15,
+11
 ],
 "open_lines": [
-22,
-16
+24,
+17
 ],
 "pcr_today": [
-2,
-1
+3,
+2
 ],
 "big_option_trades": [
-22,
+24,
 9
 ],
 "us_buyers": [
-22,
-18
+24,
+20
 ],
 "whales": [
-22,
+24,
 4
 ],
 "stock_mood": [
-22,
-18
+24,
+20
 ],
 "world_money": [
-22,
+24,
 4
 ],
 "stablecoins": [
-4,
-4
+5,
+5
 ],
 "weekly_trend": [
-4,
+5,
 0
 ],
 "strong_levels": [
-5,
-4
+7,
+5
 ],
 "buyers_sellers": [
 9,
@@ -93,12 +93,12 @@
 2
 ],
 "eth_lead": [
-2,
-2
+3,
+3
 ],
 "busy_zones": [
-5,
-2
+6,
+3
 ],
 "move_speed": [
 3,
@@ -115,11 +115,11 @@
 },
 "gold": {
 "strong_levels": [
-3,
+4,
 3
 ],
 "option_walls": [
-3,
+5,
 1
 ],
 "dollar": [
@@ -127,39 +127,39 @@
 2
 ],
 "rates": [
-5,
+7,
 2
 ],
 "open_gaps": [
-5,
-4
+7,
+6
 ],
 "yesterday": [
-5,
+7,
 3
 ],
 "last_week": [
-5,
+7,
 4
 ],
 "vwap": [
-5,
+7,
 3
 ],
 "busy_zones": [
-5,
+7,
 1
 ],
 "trend_ladder": [
-2,
+4,
 0
 ],
 "tf_agree": [
-5,
+7,
 2
 ],
 "open_lines": [
-5,
+7,
 2
 ],
 "buyers_sellers": [
@@ -167,27 +167,27 @@
 2
 ],
 "big_option_trades": [
-5,
+6,
 3
 ],
 "silver_check": [
-5,
+7,
 2
 ],
 "central_banks": [
-5,
+7,
 2
 ],
 "stock_mood": [
-5,
+7,
 2
 ],
 "world_money": [
-5,
+7,
 2
 ],
 "verdict": [
-5,
+7,
 2
 ],
 "clean_choppy": [
@@ -195,28 +195,28 @@
 0
 ],
 "gs_ratio": [
-1,
-1
+2,
+2
 ],
 "miners": [
-1,
+2,
 0
 ],
 "inflation_exp": [
-1,
-1
+2,
+2
 ],
 "weekly_trend": [
-1,
-1
+2,
+2
 ],
 "move_speed": [
-1,
-0
+2,
+1
 ],
 "first_hour": [
-1,
-0
+2,
+1
 ]
 }
 }
