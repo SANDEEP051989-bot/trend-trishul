@@ -471,5 +471,48 @@
 "eth_lead": -0.5,
 "weekly_trend": 1.0
 }
+},
+{
+"t": 1794286752.274938,
+"a": "gold",
+"p": 4124.89990234375,
+"v": {
+"strong_levels": -0.5,
+"option_walls": 1.0,
+"money_in_out": 1.0,
+"rates": 0.5,
+"open_gaps": 0.5,
+"yesterday": 0.3,
+"last_week": 0.3,
+"vwap": -1.0,
+"open_lines": -0.3333333333333333,
+"pcr_today": 1.0,
+"big_option_trades": 0.5,
+"silver_check": 1.0,
+"central_banks": 0.5,
+"world_money": 1.0,
+"verdict": 1
+}
+},
+{
+"t": 1794286752.274938,
+"a": "btc",
+"p": 74692.94,
+"v": {
+"strong_levels": -0.5,
+"big_players": -1.0,
+"rates": 0.5,
+"open_gaps": 0.5,
+"yesterday": -0.3,
+"last_week": -0.3,
+"vwap": -1.0,
+"tf_agree": -1.0,
+"open_lines": -1.0,
+"pcr_today": -1.0,
+"big_option_trades": -0.5,
+"us_buyers": -1.0,
+"whales": 1.0,
+"world_money": 1.0
+}
 }
 ]
