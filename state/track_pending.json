@@ -1,48 +1,5 @@
 [
 {
-"t": 1794293441.391547,
-"a": "gold",
-"p": 4132.2001953125,
-"v": {
-"money_in_out": 1.0,
-"rates": 0.5,
-"open_gaps": -0.5,
-"yesterday": 0.3,
-"last_week": 0.3,
-"vwap": -1.0,
-"tf_agree": 1.0,
-"open_lines": 0.3333333333333333,
-"big_option_trades": 0.5,
-"silver_check": 1.0,
-"central_banks": 0.5,
-"world_money": 1.0,
-"verdict": 1
-}
-},
-{
-"t": 1794293441.391547,
-"a": "btc",
-"p": 74597.8,
-"v": {
-"strong_levels": -0.5,
-"big_players": -1.0,
-"rates": 0.5,
-"open_gaps": 0.5,
-"yesterday": -0.3,
-"last_week": -0.3,
-"vwap": -1.0,
-"tf_agree": -1.0,
-"open_lines": -1.0,
-"buyers_sellers": -1.0,
-"pcr_today": -1.0,
-"big_option_trades": -0.5,
-"us_buyers": -1.0,
-"whales": 1.0,
-"world_money": 1.0,
-"verdict": -1
-}
-},
-{
 "t": 1794301134.367812,
 "a": "gold",
 "p": 4124.7998046875,
@@ -644,6 +601,47 @@
 "vwap": 1.0,
 "open_lines": -1.0,
 "buyers_sellers": -1.0,
+"pcr_today": -1.0,
+"max_pain": 0.5,
+"big_option_trades": 0.5,
+"us_buyers": -1.0,
+"whales": 1.0,
+"world_money": 1.0
+}
+},
+{
+"t": 1794386835.144297,
+"a": "gold",
+"p": 4067.39990234375,
+"v": {
+"dollar": -1.0,
+"rates": 0.5,
+"open_gaps": -0.5,
+"yesterday": 0.3,
+"last_week": -0.3,
+"vwap": 1.0,
+"open_lines": 0.3333333333333333,
+"big_option_trades": -0.5,
+"silver_check": 1.0,
+"central_banks": 0.5,
+"world_money": 1.0
+}
+},
+{
+"t": 1794386835.144297,
+"a": "btc",
+"p": 73661.84,
+"v": {
+"money_in_out": -1.0,
+"big_players": -1.0,
+"dollar": -1.0,
+"rates": 0.5,
+"open_gaps": 0.5,
+"yesterday": -0.3,
+"last_week": -0.3,
+"vwap": 1.0,
+"tf_agree": -1.0,
+"open_lines": -1.0,
 "pcr_today": -1.0,
 "max_pain": 0.5,
 "big_option_trades": 0.5,
