@@ -131,63 +131,63 @@
 8
 ],
 "option_walls": [
-13,
+14,
 1
 ],
 "dollar": [
-6,
-4
+7,
+5
 ],
 "rates": [
-21,
+22,
 2
 ],
 "open_gaps": [
-21,
-13
-],
-"yesterday": [
-21,
-12
-],
-"last_week": [
-21,
-8
-],
-"vwap": [
-19,
+22,
 14
 ],
+"yesterday": [
+22,
+13
+],
+"last_week": [
+22,
+9
+],
+"vwap": [
+20,
+15
+],
 "busy_zones": [
-17,
-7
+18,
+8
 ],
 "trend_ladder": [
 11,
 1
 ],
 "tf_agree": [
-15,
-6
+16,
+7
 ],
 "open_lines": [
-21,
-9
+22,
+10
 ],
 "buyers_sellers": [
 15,
 9
 ],
 "big_option_trades": [
-19,
-4
+20,
+5
 ],
 "silver_check": [
-21,
+22,
 2
 ],
 "central_banks": [
-21,
+22,
 2
 ],
 "stock_mood": [
@@ -195,7 +195,7 @@
 2
 ],
 "world_money": [
-21,
+22,
 2
 ],
 "verdict": [
@@ -203,8 +203,8 @@
 2
 ],
 "clean_choppy": [
-4,
-3
+5,
+4
 ],
 "gs_ratio": [
 4,
@@ -223,16 +223,16 @@
 4
 ],
 "move_speed": [
-6,
-4
+7,
+5
 ],
 "first_hour": [
-9,
-7
+10,
+8
 ],
 "asia_box": [
-7,
-6
+8,
+7
 ],
 "pcr_today": [
 7,
@@ -247,7 +247,7 @@
 0
 ],
 "max_pain": [
-1,
+2,
 0
 ]
 }
