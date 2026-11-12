@@ -7,6 +7,6 @@
  },
  "alarm_on": {
   "gold": false,
-  "btc": false
+  "btc": true
  }
 }
