@@ -1,19 +1,19 @@
 {
 "btc": {
 "big_players": [
-52,
-42
+53,
+43
 ],
 "dollar": [
-37,
-28
+38,
+29
 ],
 "rates": [
-52,
+53,
 10
 ],
 "open_gaps": [
-48,
+49,
 5
 ],
 "first_hour": [
@@ -21,43 +21,43 @@
 11
 ],
 "yesterday": [
-52,
-23
+53,
+24
 ],
 "last_week": [
-52,
-36
+53,
+37
 ],
 "vwap": [
-48,
-21
+49,
+22
 ],
 "trend_ladder": [
-26,
+27,
 4
 ],
 "tf_agree": [
-33,
-23
+34,
+24
 ],
 "open_lines": [
-52,
-37
+53,
+38
 ],
 "pcr_today": [
 26,
 19
 ],
 "big_option_trades": [
-52,
-24
+53,
+25
 ],
 "us_buyers": [
-52,
-42
+53,
+43
 ],
 "whales": [
-52,
+53,
 10
 ],
 "stock_mood": [
@@ -65,24 +65,24 @@
 20
 ],
 "world_money": [
-52,
+53,
 10
 ],
 "stablecoins": [
-9,
-8
+10,
+9
 ],
 "weekly_trend": [
-9,
-2
+10,
+3
 ],
 "strong_levels": [
 19,
 11
 ],
 "buyers_sellers": [
-18,
-9
+19,
+10
 ],
 "verdict": [
 24,
@@ -113,7 +113,7 @@
 0
 ],
 "max_pain": [
-21,
+22,
 6
 ],
 "option_walls": [
@@ -135,67 +135,67 @@
 },
 "gold": {
 "strong_levels": [
-11,
-8
+12,
+9
 ],
 "option_walls": [
-24,
-11
+25,
+12
 ],
 "dollar": [
-20,
-18
+21,
+19
 ],
 "rates": [
-35,
+36,
 2
 ],
 "open_gaps": [
-35,
+36,
 16
 ],
 "yesterday": [
-35,
-22
+36,
+23
 ],
 "last_week": [
-35,
-22
+36,
+23
 ],
 "vwap": [
-32,
-22
+33,
+23
 ],
 "busy_zones": [
-25,
-15
+26,
+16
 ],
 "trend_ladder": [
-19,
+20,
 1
 ],
 "tf_agree": [
-27,
-18
+28,
+19
 ],
 "open_lines": [
-35,
-17
+36,
+18
 ],
 "buyers_sellers": [
-24,
-15
+25,
+16
 ],
 "big_option_trades": [
-31,
+32,
 12
 ],
 "silver_check": [
-30,
-3
+31,
+4
 ],
 "central_banks": [
-35,
+36,
 2
 ],
 "stock_mood": [
@@ -203,36 +203,36 @@
 2
 ],
 "world_money": [
-35,
+36,
 2
 ],
 "verdict": [
-19,
-6
+20,
+7
 ],
 "clean_choppy": [
-12,
-11
+13,
+12
 ],
 "gs_ratio": [
-6,
-6
+7,
+7
 ],
 "miners": [
-6,
+7,
 0
 ],
 "inflation_exp": [
-4,
-4
+5,
+5
 ],
 "weekly_trend": [
-6,
-6
+7,
+7
 ],
 "move_speed": [
-9,
-6
+10,
+7
 ],
 "first_hour": [
 17,
@@ -247,11 +247,11 @@
 0
 ],
 "money_in_out": [
-12,
-4
+13,
+5
 ],
 "stretch": [
-8,
+9,
 0
 ],
 "max_pain": [
@@ -259,7 +259,7 @@
 0
 ],
 "push_weaker": [
-1,
+2,
 0
 ]
 }
