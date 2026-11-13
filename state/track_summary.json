@@ -1,19 +1,19 @@
 {
 "btc": {
 "big_players": [
-59,
-49
+60,
+50
 ],
 "dollar": [
-44,
-35
+45,
+36
 ],
 "rates": [
-59,
+60,
 10
 ],
 "open_gaps": [
-55,
+56,
 5
 ],
 "first_hour": [
@@ -21,40 +21,40 @@
 14
 ],
 "yesterday": [
-59,
-30
+60,
+31
 ],
 "last_week": [
-59,
-43
+60,
+44
 ],
 "vwap": [
-55,
-28
+56,
+29
 ],
 "trend_ladder": [
 33,
 4
 ],
 "tf_agree": [
-40,
-30
+41,
+31
 ],
 "open_lines": [
-59,
-44
+60,
+45
 ],
 "pcr_today": [
-27,
-20
+28,
+21
 ],
 "big_option_trades": [
-59,
-30
+60,
+31
 ],
 "us_buyers": [
-59,
-49
+60,
+50
 ],
 "whales": [
 53,
@@ -65,7 +65,7 @@
 20
 ],
 "world_money": [
-59,
+60,
 10
 ],
 "stablecoins": [
@@ -81,44 +81,44 @@
 11
 ],
 "buyers_sellers": [
-24,
-15
+25,
+16
 ],
 "verdict": [
-28,
-15
+29,
+16
 ],
 "asia_box": [
-19,
-9
+20,
+10
 ],
 "eth_lead": [
 6,
 5
 ],
 "busy_zones": [
-21,
-11
+22,
+12
 ],
 "move_speed": [
 14,
 8
 ],
 "stretch": [
-4,
+5,
 2
 ],
 "clean_choppy": [
-3,
-2
+4,
+3
 ],
 "max_pain": [
-28,
+29,
 6
 ],
 "option_walls": [
-3,
-2
+4,
+3
 ],
 "money_in_out": [
 14,
@@ -139,63 +139,63 @@
 11
 ],
 "option_walls": [
-28,
-14
+29,
+15
 ],
 "dollar": [
-27,
-24
+28,
+25
 ],
 "rates": [
-42,
+43,
 3
 ],
 "open_gaps": [
-42,
-17
+43,
+18
 ],
 "yesterday": [
-42,
-28
+43,
+29
 ],
 "last_week": [
-42,
-28
+43,
+29
 ],
 "vwap": [
-39,
-28
+40,
+29
 ],
 "busy_zones": [
-32,
-21
+33,
+22
 ],
 "trend_ladder": [
-26,
-6
+27,
+7
 ],
 "tf_agree": [
-34,
-24
+35,
+25
 ],
 "open_lines": [
-42,
-23
+43,
+24
 ],
 "buyers_sellers": [
-30,
-20
+31,
+21
 ],
 "big_option_trades": [
-37,
+38,
 13
 ],
 "silver_check": [
-37,
-9
+38,
+10
 ],
 "central_banks": [
-42,
+43,
 3
 ],
 "stock_mood": [
@@ -203,16 +203,16 @@
 2
 ],
 "world_money": [
-42,
+43,
 3
 ],
 "verdict": [
-26,
-12
+27,
+13
 ],
 "clean_choppy": [
-19,
-17
+20,
+18
 ],
 "gs_ratio": [
 8,
@@ -231,27 +231,27 @@
 8
 ],
 "move_speed": [
-11,
+12,
 8
 ],
 "first_hour": [
-18,
-15
+19,
+16
 ],
 "asia_box": [
-17,
-15
+18,
+16
 ],
 "pcr_today": [
 10,
 0
 ],
 "money_in_out": [
-19,
-10
+20,
+11
 ],
 "stretch": [
-15,
+16,
 1
 ],
 "max_pain": [
