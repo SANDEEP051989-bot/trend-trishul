@@ -620,5 +620,33 @@
 "world_money": -1.0,
 "verdict": -1
 }
+},
+{
+"t": 1794616654.465823,
+"a": "btc",
+"p": 68156.39,
+"v": {
+"strong_levels": -0.5,
+"option_walls": -1.0,
+"big_players": -1.0,
+"dollar": -1.0,
+"rates": -0.5,
+"crowd": 0.5,
+"open_gaps": 0.5,
+"yesterday": -0.3,
+"last_week": -1.0,
+"vwap": -1.0,
+"busy_zones": -1.0,
+"trend_ladder": -1.0,
+"tf_agree": -1.0,
+"stretch": 0.5,
+"open_lines": -1.0,
+"buyers_sellers": -1.0,
+"big_option_trades": 0.5,
+"us_buyers": -1.0,
+"whales": 1.0,
+"world_money": -1.0,
+"verdict": -1
+}
 }
 ]
