@@ -310,32 +310,6 @@
 }
 },
 {
-"t": 1794647714.189504,
-"a": "btc",
-"p": 67124.38,
-"v": {
-"option_walls": -1.0,
-"big_players": -1.0,
-"dollar": -1.0,
-"rates": -1.0,
-"open_gaps": 0.5,
-"yesterday": -1.0,
-"last_week": -1.0,
-"vwap": -1.0,
-"busy_zones": -1.0,
-"trend_ladder": -1.0,
-"tf_agree": -1.0,
-"clean_choppy": -1.0,
-"stretch": 0.5,
-"open_lines": -1.0,
-"buyers_sellers": -1.0,
-"big_option_trades": -0.5,
-"us_buyers": -1.0,
-"world_money": -1.0,
-"verdict": -1
-}
-},
-{
 "t": 1794652756.419976,
 "a": "btc",
 "p": 67215.05,
@@ -628,6 +602,28 @@
 "open_lines": -0.3333333333333333,
 "pcr_today": -1.0,
 "big_option_trades": 0.5,
+"us_buyers": -1.0,
+"world_money": -1.0,
+"verdict": -1
+}
+},
+{
+"t": 1794740289.987837,
+"a": "btc",
+"p": 65495.57,
+"v": {
+"option_walls": -1.0,
+"big_players": -1.0,
+"dollar": -1.0,
+"rates": -1.0,
+"open_gaps": -0.5,
+"first_hour": 1.0,
+"yesterday": 0.3,
+"last_week": -1.0,
+"vwap": 1.0,
+"open_lines": -0.3333333333333333,
+"pcr_today": -1.0,
+"big_option_trades": -0.5,
 "us_buyers": -1.0,
 "world_money": -1.0,
 "verdict": -1
