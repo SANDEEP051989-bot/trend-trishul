@@ -1,63 +1,63 @@
 {
 "btc": {
 "big_players": [
-72,
-62
+74,
+64
 ],
 "dollar": [
-57,
-48
+59,
+50
 ],
 "rates": [
-72,
-20
+74,
+22
 ],
 "open_gaps": [
-68,
+70,
 5
 ],
 "first_hour": [
-27,
-15
+28,
+16
 ],
 "yesterday": [
-72,
-43
+74,
+45
 ],
 "last_week": [
-72,
-56
+74,
+58
 ],
 "vwap": [
-67,
-40
+69,
+42
 ],
 "trend_ladder": [
-36,
-6
+38,
+8
 ],
 "tf_agree": [
-53,
-43
+55,
+45
 ],
 "open_lines": [
-72,
-57
+74,
+59
 ],
 "pcr_today": [
 36,
 29
 ],
 "big_option_trades": [
-72,
-38
+74,
+39
 ],
 "us_buyers": [
-72,
-62
+74,
+64
 ],
 "whales": [
-60,
+62,
 10
 ],
 "stock_mood": [
@@ -65,8 +65,8 @@
 20
 ],
 "world_money": [
-72,
-20
+74,
+22
 ],
 "stablecoins": [
 13,
@@ -77,16 +77,16 @@
 6
 ],
 "strong_levels": [
-20,
-12
+21,
+13
 ],
 "buyers_sellers": [
-33,
-24
+35,
+26
 ],
 "verdict": [
-41,
-28
+43,
+30
 ],
 "asia_box": [
 22,
@@ -97,15 +97,15 @@
 5
 ],
 "busy_zones": [
-34,
-24
+36,
+26
 ],
 "move_speed": [
-19,
-12
+20,
+13
 ],
 "stretch": [
-17,
+19,
 2
 ],
 "clean_choppy": [
@@ -117,15 +117,15 @@
 6
 ],
 "option_walls": [
-16,
-15
+18,
+17
 ],
 "money_in_out": [
 21,
 16
 ],
 "crowd": [
-2,
+4,
 0
 ],
 "push_weaker": [
