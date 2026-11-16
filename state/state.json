@@ -1,9 +1,9 @@
 {
  "sent": {
   "btc_short": "2026-11-16 06",
-  "btc_full": "2026-11-15 20",
+  "btc_full": "2026-11-16 08",
   "gold_short": "2026-11-16 06",
-  "gold_full": "2026-11-13 20"
+  "gold_full": "2026-11-16 08"
  },
  "alarm_on": {
   "gold": false,
