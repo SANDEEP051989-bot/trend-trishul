@@ -1,36 +1,36 @@
 {
 "btc": {
 "big_players": [
-95,
-78
+98,
+81
 ],
 "dollar": [
-80,
-64
+83,
+67
 ],
 "rates": [
-95,
-36
+98,
+39
 ],
 "open_gaps": [
-91,
-13
+94,
+16
 ],
 "first_hour": [
 35,
 19
 ],
 "yesterday": [
-95,
-59
+98,
+61
 ],
 "last_week": [
-95,
-72
+98,
+75
 ],
 "vwap": [
-90,
-56
+93,
+57
 ],
 "trend_ladder": [
 55,
@@ -41,20 +41,20 @@
 54
 ],
 "open_lines": [
-95,
-73
+98,
+76
 ],
 "pcr_today": [
-51,
-37
+54,
+40
 ],
 "big_option_trades": [
-95,
-52
+98,
+55
 ],
 "us_buyers": [
-89,
-74
+91,
+76
 ],
 "whales": [
 63,
@@ -65,28 +65,28 @@
 20
 ],
 "world_money": [
-95,
-36
+98,
+39
 ],
 "stablecoins": [
-17,
-14
+18,
+15
 ],
 "weekly_trend": [
-17,
-8
+18,
+9
 ],
 "strong_levels": [
-22,
-14
+24,
+15
 ],
 "buyers_sellers": [
 46,
 33
 ],
 "verdict": [
-64,
-44
+67,
+47
 ],
 "asia_box": [
 28,
@@ -117,8 +117,8 @@
 6
 ],
 "option_walls": [
-39,
-31
+42,
+34
 ],
 "money_in_out": [
 21,
@@ -133,7 +133,7 @@
 2
 ],
 "fear_greed": [
-4,
+5,
 2
 ],
 "forced_closings": [
@@ -143,103 +143,103 @@
 },
 "gold": {
 "strong_levels": [
-20,
+21,
 14
 ],
 "option_walls": [
-38,
-17
+40,
+18
 ],
 "dollar": [
-40,
-27
-],
-"rates": [
-55,
-7
-],
-"open_gaps": [
-55,
+42,
 28
 ],
+"rates": [
+57,
+8
+],
+"open_gaps": [
+57,
+29
+],
 "yesterday": [
-55,
-35
+57,
+36
 ],
 "last_week": [
-55,
-31
+57,
+32
 ],
 "vwap": [
-51,
+52,
 30
 ],
 "busy_zones": [
-35,
+36,
 22
 ],
 "trend_ladder": [
-35,
-11
+37,
+12
 ],
 "tf_agree": [
-45,
+46,
 25
 ],
 "open_lines": [
-55,
+57,
 28
 ],
 "buyers_sellers": [
-37,
+38,
 22
 ],
 "big_option_trades": [
-49,
-15
+51,
+16
 ],
 "silver_check": [
-50,
-12
+52,
+13
 ],
 "central_banks": [
-55,
-13
+57,
+14
 ],
 "stock_mood": [
 7,
 2
 ],
 "world_money": [
-55,
-7
+57,
+8
 ],
 "verdict": [
-39,
-15
+41,
+16
 ],
 "clean_choppy": [
 23,
 18
 ],
 "gs_ratio": [
-10,
+11,
 9
 ],
 "miners": [
-10,
-1
+11,
+2
 ],
 "inflation_exp": [
-6,
+7,
 6
 ],
 "weekly_trend": [
-10,
+11,
 9
 ],
 "move_speed": [
-14,
+15,
 8
 ],
 "first_hour": [
@@ -251,8 +251,8 @@
 16
 ],
 "pcr_today": [
-17,
-2
+19,
+3
 ],
 "money_in_out": [
 28,
@@ -267,8 +267,8 @@
 0
 ],
 "push_weaker": [
-5,
-2
+6,
+3
 ]
 }
 }
