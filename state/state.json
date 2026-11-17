@@ -6,8 +6,8 @@
   "gold_full": "2026-11-16 08"
  },
  "alarm_on": {
-  "gold": true,
-  "btc": true
+  "gold": false,
+  "btc": false
  },
  "breaks": [
   "gold|2026-11-12 00:00:00|down",
