@@ -1,36 +1,36 @@
 {
 "btc": {
 "big_players": [
-107,
+108,
 88
 ],
 "dollar": [
-92,
+93,
 74
 ],
 "rates": [
-107,
+108,
 46
 ],
 "open_gaps": [
-103,
-21
+104,
+22
 ],
 "first_hour": [
 39,
 20
 ],
 "yesterday": [
-107,
-66
+108,
+67
 ],
 "last_week": [
-107,
+108,
 82
 ],
 "vwap": [
-101,
-59
+102,
+60
 ],
 "trend_ladder": [
 60,
@@ -41,7 +41,7 @@
 57
 ],
 "open_lines": [
-107,
+108,
 83
 ],
 "pcr_today": [
@@ -49,23 +49,23 @@
 46
 ],
 "big_option_trades": [
-107,
-59
+108,
+60
 ],
 "us_buyers": [
-100,
+101,
 83
 ],
 "whales": [
-71,
-12
+72,
+13
 ],
 "stock_mood": [
-31,
+32,
 25
 ],
 "world_money": [
-107,
+108,
 46
 ],
 "stablecoins": [
@@ -81,16 +81,16 @@
 17
 ],
 "buyers_sellers": [
-51,
-35
+52,
+36
 ],
 "verdict": [
-76,
+77,
 54
 ],
 "asia_box": [
-30,
-15
+31,
+16
 ],
 "eth_lead": [
 6,
@@ -101,8 +101,8 @@
 36
 ],
 "move_speed": [
-32,
-19
+33,
+20
 ],
 "stretch": [
 32,
@@ -117,11 +117,11 @@
 6
 ],
 "option_walls": [
-51,
+52,
 41
 ],
 "money_in_out": [
-28,
+29,
 17
 ],
 "crowd": [
@@ -143,84 +143,84 @@
 },
 "gold": {
 "strong_levels": [
-24,
-15
+25,
+16
 ],
 "option_walls": [
-45,
-23
+47,
+25
 ],
 "dollar": [
-47,
-33
+50,
+35
 ],
 "rates": [
-62,
-13
+65,
+15
 ],
 "open_gaps": [
-62,
-29
+65,
+30
 ],
 "yesterday": [
-62,
-40
+65,
+42
 ],
 "last_week": [
-62,
-37
+65,
+39
 ],
 "vwap": [
-56,
-34
+59,
+36
 ],
 "busy_zones": [
-40,
-26
+43,
+28
 ],
 "trend_ladder": [
-39,
-14
+42,
+16
 ],
 "tf_agree": [
-50,
-29
+53,
+31
 ],
 "open_lines": [
-62,
-33
+65,
+35
 ],
 "buyers_sellers": [
-39,
-23
+41,
+25
 ],
 "big_option_trades": [
-55,
-17
+58,
+19
 ],
 "silver_check": [
-57,
-18
+60,
+20
 ],
 "central_banks": [
-62,
-14
+65,
+15
 ],
 "stock_mood": [
-10,
-2
+13,
+3
 ],
 "world_money": [
-62,
-13
+65,
+15
 ],
 "verdict": [
-46,
-21
+49,
+23
 ],
 "clean_choppy": [
-24,
-19
+26,
+20
 ],
 "gs_ratio": [
 12,
@@ -239,40 +239,40 @@
 10
 ],
 "move_speed": [
-16,
-8
-],
-"first_hour": [
-24,
-19
-],
-"asia_box": [
-22,
-16
-],
-"pcr_today": [
-20,
-3
-],
-"money_in_out": [
-31,
-16
-],
-"stretch": [
-26,
+19,
 10
 ],
+"first_hour": [
+26,
+20
+],
+"asia_box": [
+23,
+17
+],
+"pcr_today": [
+21,
+4
+],
+"money_in_out": [
+34,
+18
+],
+"stretch": [
+29,
+11
+],
 "max_pain": [
-3,
-0
+6,
+1
 ],
 "push_weaker": [
-6,
+7,
 3
 ],
 "big_players": [
-2,
-0
+5,
+1
 ]
 }
 }
