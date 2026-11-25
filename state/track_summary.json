@@ -1,72 +1,72 @@
 {
 "btc": {
 "big_players": [
-111,
-89
+114,
+92
 ],
 "dollar": [
-95,
-74
+97,
+76
 ],
 "rates": [
-111,
-47
+114,
+50
 ],
 "open_gaps": [
-107,
-24
+110,
+25
 ],
 "first_hour": [
-40,
-21
-],
-"yesterday": [
-111,
-69
-],
-"last_week": [
-111,
-83
-],
-"vwap": [
-104,
-61
-],
-"trend_ladder": [
-61,
+41,
 22
 ],
+"yesterday": [
+114,
+71
+],
+"last_week": [
+114,
+85
+],
+"vwap": [
+107,
+63
+],
+"trend_ladder": [
+63,
+23
+],
 "tf_agree": [
-76,
-57
+77,
+58
 ],
 "open_lines": [
-111,
-84
+114,
+86
 ],
 "pcr_today": [
 63,
 47
 ],
 "big_option_trades": [
-111,
-61
+114,
+62
 ],
 "us_buyers": [
-104,
-84
+107,
+87
 ],
 "whales": [
-75,
+78,
 15
 ],
 "stock_mood": [
-35,
-26
+38,
+29
 ],
 "world_money": [
-111,
-47
+114,
+50
 ],
 "stablecoins": [
 19,
@@ -77,16 +77,16 @@
 10
 ],
 "strong_levels": [
-28,
-18
+30,
+19
 ],
 "buyers_sellers": [
-54,
-37
+55,
+38
 ],
 "verdict": [
-80,
-55
+83,
+58
 ],
 "asia_box": [
 32,
@@ -97,12 +97,12 @@
 5
 ],
 "busy_zones": [
-50,
-36
+51,
+37
 ],
 "move_speed": [
-36,
-21
+37,
+22
 ],
 "stretch": [
 32,
@@ -117,12 +117,12 @@
 6
 ],
 "option_walls": [
-55,
-42
+58,
+45
 ],
 "money_in_out": [
-32,
-18
+35,
+21
 ],
 "crowd": [
 8,
@@ -143,83 +143,83 @@
 },
 "gold": {
 "strong_levels": [
-26,
-16
+29,
+17
 ],
 "option_walls": [
-47,
+48,
 25
 ],
 "dollar": [
-50,
-35
+52,
+37
 ],
 "rates": [
-66,
-15
+69,
+17
 ],
 "open_gaps": [
-66,
-30
+69,
+32
 ],
 "yesterday": [
-66,
-42
+69,
+44
 ],
 "last_week": [
-66,
-39
+69,
+40
 ],
 "vwap": [
-60,
-36
+62,
+37
 ],
 "busy_zones": [
-43,
-28
+45,
+29
 ],
 "trend_ladder": [
-43,
+44,
 16
 ],
 "tf_agree": [
-53,
-31
+54,
+32
 ],
 "open_lines": [
-66,
-36
+69,
+38
 ],
 "buyers_sellers": [
 41,
 25
 ],
 "big_option_trades": [
-59,
-19
-],
-"silver_check": [
-61,
+62,
 20
 ],
+"silver_check": [
+64,
+22
+],
 "central_banks": [
-66,
-16
+69,
+17
 ],
 "stock_mood": [
-14,
-4
+17,
+5
 ],
 "world_money": [
-66,
-15
+69,
+17
 ],
 "verdict": [
-50,
-23
+51,
+24
 ],
 "clean_choppy": [
-26,
+27,
 20
 ],
 "gs_ratio": [
@@ -239,15 +239,15 @@
 10
 ],
 "move_speed": [
-19,
-10
+21,
+11
 ],
 "first_hour": [
 26,
 20
 ],
 "asia_box": [
-23,
+24,
 17
 ],
 "pcr_today": [
@@ -255,8 +255,8 @@
 4
 ],
 "money_in_out": [
-35,
-18
+38,
+20
 ],
 "stretch": [
 29,
